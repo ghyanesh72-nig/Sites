@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <title>Admin Panne</title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Main Styling -->
+    <link href="./assets/css/argon-dashboard-tailwind.css?v=1.0.1" rel="stylesheet" />
+  </head>
+
+  <body class="m-0 font-sans text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500">
+    <!-- chnage baground color -->
+    <div class="absolute w-full bg-blue-500 dark:hidden min-h-75"></div>
+    <!-- side of the dashboard -->
+    <aside class="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-0 my-4 overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990 xl:ml-6 rounded-2xl xl:left-0 xl:translate-x-0" aria-expanded="false">
+      <div class="h-19 flex justify-center items-center">
+        <i class="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden" sidenav-close></i>
+        
+        <!-- Updated font size and centered text -->
+        <span class="ml-1 font-semibold text-lg transition-all duration-200 ease-nav-brand">Admin Page</span>
+      </div>
+      
+
+      <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
+
+      <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
+        <ul class="flex flex-col pl-0 mb-0">
+          <li class="mt-0.5 w-full">
+            <a class="py-2.7 bg-blue-500/13 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors" href="./pages/dashboard.html">
+              <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i class="relative top-0 text-sm leading-normal text-blue-500 ni ni-tv-2"></i>
+              </div>
+              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Dashboard</span>
+            </a>
+          </li>
+
+
+          <li class="w-full mt-4">
+            <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Account pages</h6>
+          </li>
+
+          <li class="mt-0.5 w-full">
+            <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/profile.html">
+              <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i class="relative top-0 text-sm leading-normal text-slate-700 ni ni-single-02"></i>
+              </div>
+              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Profile</span>
+            </a>
+          </li>
+
+          <li class="mt-0.5 w-full">
+            <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/report.html">
+              <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i class="relative top-0 text-sm leading-normal text-orange-500 ni ni-single-copy-04"></i>
+              </div>
+              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Report</span>
+            </a>
+          </li>
+
+          
+        </ul>
+      </div>
+
+      <div class="mx-4">
+        <!-- load phantom colors for card after: -->
+        <p class="invisible hidden text-gray-800 text-red-500 text-red-600 text-blue-500 bg-gray-500/30 bg-cyan-500/30 bg-emerald-500/30 bg-orange-500/30 bg-red-500/30 after:bg-gradient-to-tl after:from-zinc-800 after:to-zinc-700 dark:bg-gradient-to-tl dark:from-slate-750 dark:to-gray-850 after:from-blue-700 after:to-cyan-500 after:from-orange-500 after:to-yellow-500 after:from-green-600 after:to-lime-400 after:from-red-600 after:to-orange-600 after:from-slate-600 after:to-slate-300 text-emerald-500 text-cyan-500 text-slate-400"></p>
+        <div class="relative flex flex-col min-w-0 break-words bg-transparent border-0 shadow-none rounded-2xl bg-clip-border" sidenav-card>
+          <!-- <img class="w-1/2 mx-auto" src="./assets/img/illustrations/icon-documentation.svg" alt="sidebar illustrations" /> -->
+          <div class="flex-auto w-full p-4 pt-0 text-center">
+            <div class="transition-all duration-200 ease-nav-brand">
+              <h6 class="mb-0 dark:text-white text-slate-700">Exit</h6>
+              <!-- <p class="mb-0 text-xs font-semibold leading-tight dark:text-white dark:opacity-60">Please check our docs</p> -->
+            </div>
+          </div>
+        </div>
+        <a href="javascript:void(0)" id="logOutBtn" 
+        class="inline-block w-full px-8 py-2 mb-4 text-xs font-bold leading-normal text-center text-white capitalize transition-all ease-in rounded-lg shadow-md bg-slate-700 bg-150 hover:shadow-xs hover:-translate-y-px">
+        LogOut
+     </a>
+            
+      
+      </div>
+    </aside>
+
+    <!-- end sidenav -->
+
+    <main class="relative h-full max-h-screen transition-all duration-200 ease-in-out xl:ml-68 rounded-xl">
+      <!-- Navbar -->
+      <nav class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all ease-in shadow-none duration-250 rounded-2xl lg:flex-nowrap lg:justify-start" navbar-main navbar-scroll="false">
+        <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
+          <nav>
+            <!-- breadcrumb -->
+            <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+              <li class="text-sm leading-normal">
+                <a class="text-white opacity-50" href="javascript:;">Pages</a>
+              </li>
+              <li class="text-sm pl-2 capitalize leading-normal text-white before:float-left before:pr-2 before:text-white before:content-['/']" aria-current="page">Dashboard</li>
+            </ol>
+            <h6 class="mb-0 font-bold text-white capitalize">Dashboard</h6>
+          </nav>
+
+          <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
+            <div class="flex items-center md:ml-auto md:pr-4">
+              <div class="relative flex flex-wrap items-stretch w-full transition-all rounded-lg ease">
+                <span class="text-sm ease leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-tr-none rounded-br-none border border-r-0 border-transparent bg-transparent py-2 px-2.5 text-center font-normal text-slate-500 transition-all">
+                  <i class="fas fa-search"></i>
+                </span>
+                <input 
+  id="usnSearch" 
+  type="text" 
+  class="pl-9 text-sm focus:shadow-primary-outline ease w-1/100 leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 dark:bg-slate-850 dark:text-white bg-white bg-clip-padding py-2 pr-3 text-gray-700 transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none focus:transition-shadow" 
+  placeholder="Search by USN or Name here" 
+/>
+<div id="suggestions" class="absolute bg-white border border-gray-300 mt-1 w-full max-h-48 overflow-y-auto"></div>
+
+           </div>
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+
+      <!-- end Navbar -->
+
+      <!-- cards -->
+      <div class="w-full px-6 py-6 mx-auto">
+        <!-- row 1 -->
+        <div class="flex flex-wrap -mx-3">
+          <!-- card1 -->
+          <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div class="flex-auto p-4">
+                <div class="flex flex-row -mx-3">
+                  <div class="flex-none w-2/3 max-w-full px-3">
+                    <div>
+                      <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Total Students</p>
+                      <h5 class="totalStudents mb-2 font-bold dark:text-white">Loading....</h5>
+                      <p class="mb-0 dark:text-white dark:opacity-60">
+                        <span class="text-sm font-bold leading-normal text-emerald-500">Total Strenghth <br>
+                        Filled teh from</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="px-3 text-right basis-1/3">
+                    <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-blue-500 to-violet-500">
+                      <i class="ni ni-calculator text-lg relative top-3.5 text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card2 -->
+          <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div class="flex-auto p-4">
+                <div class="flex flex-row -mx-3">
+                  <div class="flex-none w-2/3 max-w-full px-3">
+                    <div>
+                      <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Btach 2023</p>
+                      <h5 id="batch2025-2027" class="mb-2 font-bold dark:text-white">Loading...</h5>
+                      <p class="mb-0 dark:text-white dark:opacity-60">
+                        <span class="text-sm font-bold leading-normal text-emerald-500">Total</span>
+                        From new <br>batch
+                      </p>
+                    </div>
+                  </div>
+                  <div class="px-3 text-right basis-1/3">
+                    <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-red-600 to-orange-600">
+                      <i class="ni leading-none ni-plus text-lg relative top-3.5 text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card3 -->
+          <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 sm:flex-none xl:mb-0 xl:w-1/4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div class="flex-auto p-4">
+                <div class="flex flex-row -mx-3">
+                  <div class="flex-none w-2/3 max-w-full px-3">
+                    <div>
+                      <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Btach 2025</p>
+                      <h5 id="batch2023-2025" class="mb-2 font-bold dark:text-white">Loading...</h5>
+                      <p class="mb-0 dark:text-white dark:opacity-60">
+                        <span class="text-sm font-bold leading-normal text-red-600">Total</span>
+                        from Previous year
+                      </p>
+                    </div>
+                  </div>
+                  <div class="px-3 text-right basis-1/3">
+                    <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-emerald-500 to-teal-400">
+                      <i class="ni leading-none ni-paper text-lg relative top-3.5 text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- card4 -->
+          <div class="w-full max-w-full px-3 sm:w-1/2 sm:flex-none xl:w-1/4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div class="flex-auto p-4">
+                <div class="flex flex-row -mx-3">
+                  <div class="flex-none w-2/3 max-w-full px-3">
+                    <div>
+                      <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Filled percentage</p>
+                      <h5 class="totalperc mb-2 font-bold dark:text-white">Loading....</h5>
+                      <p class="mb-0 dark:text-white dark:opacity-60">
+                        <span class="text-sm font-bold leading-normal text-emerald-500">Loading</span>
+                        students<br>
+                        still to fill 
+                      </p>
+                    </div>
+                  </div>
+                  <div class="px-3 text-right basis-1/3">
+                    <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-orange-500 to-yellow-500">
+                      <i class="ni leading-none ni-paper text-lg relative top-3.5 text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- cards row 3 -->
+
+        <div class="flex flex-wrap mt-6 -mx-3">
+          <div class="w-full max-w-full px-3 mt-0 mb-6 lg:mb-0 lg:w-9/12 lg:flex-none">
+            <div class="relative flex flex-col min-w-0 break-words bg-white border-0 border-solid shadow-xl rounded-lg bg-clip-border">
+              <!-- Table inside the card -->
+              <div class="overflow-x-auto p-4">
+                <table class="min-w-full table-auto mx-auto w-full" style="border-spacing: 0.6cm;">
+                  <thead>
+                    <tr class="bg-gray-200">
+                      <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 rounded-lg bg-gray-200 text-white">Name</th>
+                      <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 rounded-lg bg-gray-200 text-white">USN</th>
+                      <th class="px-6 py-3 text-left text-sm font-medium text-gray-700 rounded-lg bg-gray-200 text-white">Skills</th>
+                      <th class="px-6 py-3 text-center text-sm font-medium text-gray-700 rounded-lg bg-gray-200 text-white">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="student-body">
+                    <!-- Dynamic rows will be injected here by JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+              
+              <!-- Pagination controls -->
+              <div class="p-4">
+                <div id="pagination" class="flex justify-center items-center space-x-6">
+                  <button id="prevPage" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50" disabled>Prev</button>
+                  <span id="pageInfo" class="text-gray-700 font-semibold">Page 1</span>
+                  <button id="nextPage" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg hover:bg-gray-400 disabled:opacity-50">Next</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        
+        <!-- footer section illida strat -->
+        <footer class="pt-4">
+          <div class="w-full px-6 mx-auto">
+            <div class="flex flex-wrap items-center -mx-3 lg:justify-between">
+              <div class="w-full max-w-full px-3 mt-0 mb-6 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none">
+                <div class="text-sm leading-normal text-center text-slate-500 lg:text-left">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear() + ",");
+                  </script>
+                  made with <i class="fa fa-heart"></i> by
+                  <a href="https://www.instagram.com/ghyanesh_42/" class="font-semibold text-slate-700 dark:text-white" target="_blank">Ghyanesh co registerd</a>
+                  for a better web.
+                </div>
+              </div>
+              <div class="w-full max-w-full px-3 mt-0 shrink-0 lg:w-1/2 lg:flex-none">
+                <ul class="flex flex-wrap justify-center pl-0 mb-0 list-none lg:justify-end">
+                  <li class="nav-item">
+                    <a href="https://www.instagram.com/ghyanesh_42/" class="block px-4 pt-0 pb-1 pr-0 text-sm font-normal transition-colors ease-in-out text-slate-500" target="_blank">Follow me</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end cards -->
+    </main>
+  </body>
+  <!-- plugin for charts  -->
+  <script src="./assets/js/plugins/chartjs.min.js" async></script>
+  <!-- plugin for scrollbar  -->
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js" async></script>
+  <!-- main script file  -->
+  <script src="./assets/js/argon-dashboard-tailwind.js?v=1.0.1" async></script>
+  <script src="./dashboard.js" async></script>
+</html>

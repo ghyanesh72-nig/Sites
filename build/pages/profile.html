@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <title>Student Details</title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Main Styling -->
+    <link href="../assets/css/argon-dashboard-tailwind.css?v=1.0.1" rel="stylesheet" />
+  </head>
+  <body class="m-0 font-sans antialiased font-normal dark:bg-slate-900 text-base leading-default bg-gray-50 text-slate-500">
+    <div class="absolute bg-y-50 w-full top-0 bg-[url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/profile-layout-header.jpg')] min-h-75">
+      <span class="absolute top-0 left-0 w-full h-full bg-blue-500 opacity-60"></span>
+    </div>
+
+    <aside class="fixed inset-y-0 flex-wrap items-center justify-between block w-full p-0 my-4 overflow-y-auto antialiased transition-transform duration-200 -translate-x-full bg-white border-0 shadow-xl dark:shadow-none dark:bg-slate-850 max-w-64 ease-nav-brand z-990 xl:ml-6 rounded-2xl xl:left-0 xl:translate-x-0" aria-expanded="false">
+      <div class="h-19 flex justify-center items-center">
+        <i class="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden" sidenav-close></i>
+        
+        <!-- Updated font size and centered text -->
+        <span class="ml-1 font-semibold text-lg transition-all duration-200 ease-nav-brand">Admin Page</span>
+      </div>
+      
+
+      <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
+
+      <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
+        <ul class="flex flex-col pl-0 mb-0">
+          <li class="mt-0.5 w-full">
+            <a class="py-2.7 bg-blue-500/13 dark:text-white dark:opacity-80 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap rounded-lg px-4 font-semibold text-slate-700 transition-colors" href="../index.html">
+              <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i class="relative top-0 text-sm leading-normal text-blue-500 ni ni-tv-2"></i>
+              </div>
+              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Dashboard</span>
+            </a>
+          </li>
+
+
+          <li class="w-full mt-4">
+            <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Account pages</h6>
+          </li>
+
+          
+
+          <li class="mt-0.5 w-full">
+            <a class=" dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./report.html">
+              <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
+                <i class="relative top-0 text-sm leading-normal text-orange-500 ni ni-single-copy-04"></i>
+              </div>
+              <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Report</span>
+            </a>
+          </li>
+
+          
+        </ul>
+      </div>
+
+      
+    </aside>
+
+    <div class="relative h-full max-h-screen transition-all duration-200 ease-in-out xl:ml-68">
+      <!-- Student Details Section -->
+<!-- Student Details Section -->
+<div class="relative w-full mx-auto mt-60">
+  <div class="relative flex flex-col flex-auto min-w-0 p-4 mx-6 overflow-hidden break-words bg-white border-0 dark:bg-slate-850 dark:shadow-dark-xl shadow-3xl rounded-2xl bg-clip-border">
+    <div class="flex flex-wrap -mx-3">
+      <div class="flex-none w-auto max-w-full px-3">
+        <div class="relative inline-flex items-center justify-center text-white transition-all duration-200 ease-in-out text-base h-19 w-19 rounded-xl">
+          <img id="student-profile-img" src="../assets/img/gicon.jpg" alt="profile_image" class="w-full shadow-2xl rounded-xl" />
+        </div>
+      </div>
+      <div class="flex-none w-auto max-w-full px-3 my-auto">
+        <div class="h-full">
+          <!-- Student name and USN dynamically populated -->
+          <h5 id="student-name" class="mb-1 dark:text-white">Student Name</h5>
+          <p id="student-usn" class="mb-0 font-semibold leading-normal dark:text-white dark:opacity-60 text-sm">USN</p>
+        </div>
+      </div>
+      <div class="w-full max-w-full px-3 mx-auto mt-4 sm:my-auto sm:mr-0 md:w-1/2 md:flex-none lg:w-4/12">
+        <div class="relative right-0">
+          <ul class="relative flex flex-wrap p-1 list-none bg-gray-50 rounded-xl" nav-pills role="tablist">
+            <li class="z-30 flex-auto text-center">
+              <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg bg-inherit text-slate-700" nav-link active href="javascript:;" role="tab" aria-selected="true">
+                <i class="ni ni-view"></i>
+                <span class="ml-2">View</span>
+              </a>
+            </li>
+            <li class="z-30 flex-auto text-center">
+              <a class="z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg bg-inherit text-slate-700" nav-link href="javascript:;" role="tab" aria-selected="false">
+                <i class="ni ni-edit-83"></i>
+                <span class="ml-2">Edit</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- main page dude  -->
+
+      <div class="w-full p-6 mx-auto">
+        <div class="flex flex-wrap -mx-3">
+          <div class="w-full max-w-full px-3 shrink-0 md:w-8/12 md:flex-0">
+            <!-- /// -->
+            <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <div class="border-black/12.5 rounded-t-2xl border-b-0 border-solid p-6 pb-0">
+                <div class="flex items-center">
+                  <p class="mb-0 font-bold dark:text-white/80">Edit Student Details</p>
+                  <button id="save-button" type="button" class="inline-block px-8 py-2 mb-4 ml-auto font-bold leading-normal text-center text-white align-middle transition-all ease-in bg-blue-500 border-0 rounded-lg shadow-md cursor-pointer text-xs tracking-tight-rem hover:shadow-xs hover:-translate-y-px active:opacity-85">Save</button>
+                </div>
+              </div>
+              <div class="studentprofile flex-auto p-6">
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Personal Info</p>
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-name2" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">student-Name</label>
+                      <input type="text" name="student-name2" value="" id="student-name2" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                  
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-batch" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">student-batch</label>
+                      <input type="text" name="student-batch" value="" id="student-batch" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                  
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-usn2" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">USN</label>
+                      <input type="text" name="student-usn2" value="" id="student-usn2" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                  
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-email" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Email Address</label>
+                      <input type="email" name="student-email" value="jesse@example.com" id="student-email" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>                  
+                </div>
+                <hr class="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent " />
+                
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Contact Information</p>
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-full md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-address" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Address</label>
+                      <input type="text" name="student-address" id="student-address" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-4/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="student-number" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Phone Number</label>
+                      <input type="number" name="student-number" id="student-number" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+          
+                </div>
+                <hr class="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent " />
+
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Academic Details</p>
+                <div class="flex flex-wrap -mx-3">
+                  <!-- First Textbox (First Row) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="sslc" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">SSLC Percentage</label>
+                      <input type="number" name="sslc" id="sslc" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                
+                  <!-- Second Textbox (First Row) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="puc" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">PUC Percentage</label>
+                      <input type="number" name="puc" id="puc" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Second Row (Three Textboxes) -->
+                <div class="flex flex-wrap -mx-3">
+                  <!-- First Textbox (Second Row) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-4/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="degree-stream" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Degree Stream</label>
+                      <input type="text" name="degree-stream" id="degree-stream" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                
+                  <!-- Second Textbox (Second Row) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-4/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="degree" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Degree/Diploma Percentage</label>
+                      <input type="number" name="degree" id="degree" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                
+                  <!-- Third Textbox (Second Row) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-4/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="pgcet" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">PGCET Rank</label>
+                      <input type="number" name="pgcet" id="pgcet" class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                
+
+                <hr class="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent " />
+
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Areas Of Interest</p>
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-full md:flex-0">
+                    <div class="mb-4">
+                      <label for="interest-technical" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Technical</label>
+                      <input type="text" name="interest-technical" id="interest-technical" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-full md:flex-0">
+                    <div class="mb-4">
+                      <label for="interest-extracurricular" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Extra-Curricular</label>
+                      <input type="text" name="interest-extracurricular" id="interest-extracurricular" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                  <!-- First Textbox (Sports) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="interest-sports" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Sports</label>
+                      <input type="text" name="interest-sports" id="interest-sports" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                
+                  <!-- Second Textbox (Hobbies) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="hobbies" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Hobbies</label>
+                      <input type="text" name="hobbies" id="hobbies" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                
+                <hr class="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent " />
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Projects and Certifications</p>
+                <div class="flex flex-wrap -mx-3">
+                  <!-- First Textbox (mini) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="project-mini" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Mini Project</label>
+                      <input type="text" name="project-mini" id="project-mini" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                
+                  <!-- Second Textbox (manjor) -->
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-6/12 md:flex-0">
+                    <div class="mb-4">
+                      <label for="project-major" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Major Project</label>
+                      <input type="text" name="project-major" id="project-major" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-full md:flex-0">
+                    <div class="mb-4">
+                      <label for="certifications" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Certifications</label>
+                      <input type="text" name="certifications" id="certifications" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+                <hr class="h-px mx-0 my-4 bg-transparent border-0 opacity-25 bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent " />
+                <p class="leading-normal uppercase font-bold dark:text-white dark:opacity-60 text-sm">Special Achivements</p>
+
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 shrink-0 md:w-full md:flex-0">
+                    <div class="mb-4">
+                      <label for="special" class="inline-block mb-2 ml-1 font-bold text-xs text-slate-700 dark:text-white/80">Achievements</label>
+                      <input type="text" name="special" id="special" value="Loading..." class="focus:shadow-primary-outline dark:bg-slate-850 dark:text-white text-sm leading-5.6 ease block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-2 font-normal text-gray-700 outline-none transition-all placeholder:text-gray-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- //////another secrion of nigga///////// -->
+          <div class="w-full max-w-full px-3 mt-6 shrink-0 md:w-4/12 md:flex-0 md:mt-0">
+            <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
+              <h1 class="text-lg font-bold text-gray-800 dark:text-white text-center mt-4">
+                Placement Details
+              </h1>              
+              <div class="flex flex-wrap justify-center -mx-3">
+                <div class="w-4/12 max-w-full px-3 flex-0 ">
+                  
+                </div>
+              </div>
+              
+              <div class="flex-auto p-6 pt-0">
+                <div class="flex flex-wrap -mx-3">
+                  <div class="w-full max-w-full px-3 flex-1-0">
+                    <div class="flex justify-center">
+                      <div class="grid text-center">
+                        <span class="font-bold dark:text-white text-lg">Loading....</span>
+                        <span class="leading-normal dark:text-white text-sm opacity-80">Offer</span>
+                      </div>
+                      <div class="grid mx-6 text-center">
+                        <span class="font-bold dark:text-white text-lg">50</span>
+                        <span class="leading-normal dark:text-white text-sm opacity-80">Total Companys Visited</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-6 text-center">
+                  <h5 class="dark:text-white ">
+                    Placed Companys
+                  </h5>
+                  <div class="mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
+                    Loading..........<br>
+                    <i class="mr-2 dark:text-white ni ni-pin-3"></i>
+                    Bangalore
+                  </div>
+                  
+                  <div class="mt-6 mb-2 font-semibold leading-relaxed text-base dark:text-white/80 text-slate-700">
+                    <i class="mr-2 dark:text-white ni ni-briefcase-24"></i>
+                    Role
+                  </div>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      
+    </div>
+  </body>
+  <!-- plugin for scrollbar  -->
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js" async></script>
+  <!-- main script file  -->
+  <script src="../assets/js/argon-dashboard-tailwind.js?v=1.0.1" async></script>
+  <!-- <script src="../dummy.js" async></script> -->
+  <script src="../dummy.js" async></script>
+</html>

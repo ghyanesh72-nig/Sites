@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+    .form-heading {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-page {
+      display: none;
+    }
+    .form-page input,
+    .form-page select,
+    .form-page textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    .form-button {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .form-button:hover {
+      background-color: #0056b3;
+    }
+    .form-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="form-heading">Student Form</h2>
+    <form id="studentForm">
+      <div class="form-page" id="page-1">
+        <h3>Personal Information</h3>
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" required />
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
+        <input type="text" id="usn" name="usn" placeholder="USN" required />
+        <input type="text" id="mobile" name="mobile" placeholder="Mobile" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input type="text" id="address" name="address" placeholder="Address" required />
+      </div>
+
+      <div class="form-page" id="page-2">
+        <h3>Academic and Interests</h3>
+        <input type="text" id="degreeStream" name="degreeStream" placeholder="Degree Stream" required />
+        <textarea id="hobbies" name="hobbies" placeholder="Hobbies" required></textarea>
+        <textarea id="interestTechnical" name="interestTechnical" placeholder="Technical Interests" required></textarea>
+        <textarea id="interestExtracurricular" name="interestExtracurricular" placeholder="Extracurricular Interests" required></textarea>
+        <textarea id="interestSports" name="interestSports" placeholder="Sports Interests" required></textarea>
+      </div>
+
+      <div class="form-page" id="page-3">
+        <h3>Certifications and Projects</h3>
+        <textarea id="certifications" name="certifications" placeholder="Certifications" required></textarea>
+        <textarea id="internships" name="internships" placeholder="Internships" required></textarea>
+        <textarea id="learnSkill" name="learnSkill" placeholder="Skills Learned" required></textarea>
+        <textarea id="miniProject" name="miniProject" placeholder="Mini Project" required></textarea>
+        <textarea id="majorProject" name="majorProject" placeholder="Major Project" required></textarea>
+        <textarea id="researchPapers" name="researchPapers" placeholder="Research Papers" required></textarea>
+      </div>
+
+      <div class="form-page" id="page-4">
+        <h3>Academic Results and Achievements</h3>
+        <textarea id="achievements" name="achievements" placeholder="Achievements" required></textarea>
+        <input type="text" id="managementPgcet" name="managementPgcet" placeholder="Management PG-CET" required />
+        <input type="text" id="sslc" name="sslc" placeholder="SSLC Marks" required />
+        <input type="text" id="puc" name="puc" placeholder="PUC Marks" required />
+        <input type="text" id="degree" name="degree" placeholder="Degree Marks" required />
+      </div>
+
+      <div class="form-navigation">
+        <button type="button" id="prevButton" class="form-button" style="display: none;">Previous</button>
+        <button type="button" id="nextButton" class="form-button">Next</button>
+        <button type="submit" id="submitButton" class="form-button" style="display: none;">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../studentjs.js"></script>
+</body>
+</html>
