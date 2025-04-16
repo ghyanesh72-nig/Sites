@@ -53,7 +53,7 @@ function displayBatchCounts() {
 // Fetch student details from the API
 function fetchStudentDetails() {
   console.log("Fetching data from API...");
-  fetch('https://deep72.onrender.com/students')  // Ensure this endpoint works in the backend
+  fetch('https://deep72-1.onrender.com/students')  // Ensure this endpoint works in the backend
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed to fetch student details");
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // View student details in the studentdetails page
 function viewStudentDetails(usn) {
-  fetch(`https://deep72.onrender.com/students/${usn}`)
+  fetch(`https://deep72-1.onrender.com/students/${usn}`)
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed to fetch student details");
