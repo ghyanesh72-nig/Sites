@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to check if USN already exists
     async function checkIfUSNExists(usn) {
       try {
-        const response = await fetch(`https://deepz.onrender.com/check-usn/${usn}`);
+        const response = await fetch(`https://deep72-1.onrender.com/check-usn/${usn}`);
         const data = await response.json();
         return data.exists; // Returns true if USN exists, false otherwise
       } catch (error) {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Send form data to the backend using a POST request
         try {
-          const response = await fetch('https://deepz.onrender.com/submit-form', {
+          const response = await fetch('https://deep72-1.onrender.com/submit-form', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
