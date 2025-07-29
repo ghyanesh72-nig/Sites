@@ -6,15 +6,20 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <title>Admin Panel</title>
+    <!-- Fonts and Icons -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Popper -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <!-- Main Styling -->
     <link href="../assets/css/argon-dashboard-tailwind.css?v=1.0.1" rel="stylesheet" />
   </head>
 
   <body class="m-0 font-sans text-base antialiased font-normal dark:bg-slate-900 leading-default bg-gray-50 text-slate-500">
+    <!-- Background -->
     <div class="absolute w-full bg-blue-500 dark:hidden min-h-75"></div>
 
     <!-- Sidebar -->
@@ -23,7 +28,9 @@
         <i class="absolute top-0 right-0 p-4 opacity-50 cursor-pointer fas fa-times dark:text-white text-slate-400 xl:hidden" sidenav-close></i>
         <span class="ml-1 font-semibold text-lg transition-all duration-200 ease-nav-brand">Admin Page</span>
       </div>
+
       <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
+
       <div class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full">
         <ul class="flex flex-col pl-0 mb-0">
           <li class="mt-0.5 w-full">
@@ -34,9 +41,11 @@
               <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Dashboard</span>
             </a>
           </li>
+
           <li class="w-full mt-4">
             <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase dark:text-white opacity-60">Account pages</h6>
           </li>
+
           <li class="mt-0.5 w-full">
             <a class="dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/profile.html">
               <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
@@ -45,6 +54,7 @@
               <span class="ml-1 duration-300 opacity-100 pointer-events-none ease">Profile</span>
             </a>
           </li>
+
           <li class="mt-0.5 w-full">
             <a class="dark:text-white dark:opacity-80 py-2.7 text-sm ease-nav-brand my-0 mx-2 flex items-center whitespace-nowrap px-4 transition-colors" href="./pages/sign-in.html">
               <div class="mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-center stroke-0 text-center xl:p-2.5">
@@ -57,23 +67,24 @@
       </div>
     </aside>
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <div class="w-full px-6 py-6 mx-auto">
-      <!-- Export Cards -->
       <div class="flex flex-wrap -mx-3 justify-center">
-        <!-- Export as PDF -->
-        <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 xl:w-1/4 mt-6">
-          <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 rounded-2xl bg-clip-border">
+        <!-- Export as PDF Card -->
+        <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 xl:mb-0 xl:w-1/4 mt-6">
+          <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
             <div class="flex-auto p-4">
               <div class="flex flex-row -mx-3">
                 <div class="flex-none w-2/3 max-w-full px-3">
-                  <p class="mb-0 text-sm font-semibold uppercase dark:text-white dark:opacity-60">Total Students</p>
-                  <h5 class="mb-2 font-bold dark:text-white">Export As PDF</h5>
-                  <p class="mb-0 dark:text-white dark:opacity-60">
-                    <a href="https://docs.google.com/spreadsheets/d/1e9-q8zplPrgx4y0L6XhSpkNwu2LvQhstRLqcrRWq0E4/edit?usp=sharing" target="_blank" class="text-sm font-bold text-emerald-500">
-                      Click Here
-                    </a>
-                  </p>
+                  <div>
+                    <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Total Students</p>
+                    <h5 class="totalStudents mb-2 font-bold dark:text-white">Export As PDF</h5>
+                    <p class="mb-0 dark:text-white dark:opacity-60">
+                      <a href="https://docs.google.com/spreadsheets/d/1e9-q8zplPrgx4y0L6XhSpkNwu2LvQhstRLqcrRWq0E4/edit?usp=sharing" class="text-sm font-bold leading-normal text-emerald-500" target="_blank">
+                        Click Here
+                      </a>
+                    </p>
+                  </div>
                 </div>
                 <div class="px-3 text-right basis-1/3">
                   <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-blue-500 to-violet-500">
@@ -85,19 +96,21 @@
           </div>
         </div>
 
-        <!-- Export as Excel -->
-        <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 xl:w-1/4 mt-6">
-          <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 rounded-2xl bg-clip-border">
+        <!-- Export as Excel Card -->
+        <div class="w-full max-w-full px-3 mb-6 sm:w-1/2 xl:mb-0 xl:w-1/4 mt-6">
+          <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 dark:shadow-dark-xl rounded-2xl bg-clip-border">
             <div class="flex-auto p-4">
               <div class="flex flex-row -mx-3">
                 <div class="flex-none w-2/3 max-w-full px-3">
-                  <p class="mb-0 text-sm font-semibold uppercase dark:text-white dark:opacity-60">Batch 2023</p>
-                  <h5 class="mb-2 font-bold dark:text-white">Export As Excel</h5>
-                  <p class="mb-0 dark:text-white dark:opacity-60">
-                    <a href="https://docs.google.com/spreadsheets/d/1e9-q8zplPrgx4y0L6XhSpkNwu2LvQhstRLqcrRWq0E4/edit?usp=sharing" target="_blank" class="text-sm font-bold text-emerald-500">
-                      Click Here
-                    </a>
-                  </p>
+                  <div>
+                    <p class="mb-0 font-sans text-sm font-semibold leading-normal uppercase dark:text-white dark:opacity-60">Batch 2023</p>
+                    <h5 class="mb-2 font-bold dark:text-white">Export As Excel</h5>
+                    <p class="mb-0 dark:text-white dark:opacity-60">
+                      <a href="https://docs.google.com/spreadsheets/d/1e9-q8zplPrgx4y0L6XhSpkNwu2LvQhstRLqcrRWq0E4/edit?usp=sharing" class="text-sm font-bold leading-normal text-emerald-500" target="_blank">
+                        Click Here
+                      </a>
+                    </p>
+                  </div>
                 </div>
                 <div class="px-3 text-right basis-1/3">
                   <div class="inline-block w-12 h-12 text-center rounded-circle bg-gradient-to-tl from-red-600 to-orange-600">
@@ -108,21 +121,32 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Looker Studio Embed -->
-      <div class="w-full mt-10">
-        <div class="relative h-0 overflow-hidden pb-[56.25%] rounded-2xl shadow-xl">
-          <iframe 
-            class="absolute top-0 left-0 w-full h-full border-0 rounded-2xl"
-            src="https://lookerstudio.google.com/embed/reporting/a0bd5b14-70a5-485a-9da6-40b1f886279b/page/p_8v5qzmrhvc"
-            allowfullscreen>
-          </iframe>
+        <!-- Looker Studio Dashboard Card -->
+        <div class="w-full max-w-full px-3 mb-6 mt-6">
+          <div class="relative flex flex-col min-w-0 break-words bg-white shadow-xl dark:bg-slate-850 rounded-2xl bg-clip-border">
+            <div class="flex-auto p-4">
+              <div class="w-full px-3">
+                <h5 class="mb-2 font-bold text-xl text-slate-800 dark:text-white">Dashboard Report</h5>
+                <p class="mb-4 text-sm text-slate-600 dark:text-slate-300">
+                  Embedded Looker Studio analytics dashboard
+                </p>
+                <div class="relative h-0 overflow-hidden pb-[56.25%] rounded-2xl shadow-xl">
+                  <iframe
+                    class="absolute top-0 left-0 w-full h-full border-0 rounded-2xl"
+                    src="https://lookerstudio.google.com/embed/reporting/a0bd5b14-70a5-485a-9da6-40b1f886279b/page/p_8v5qzmrhvc"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
 
-    <!-- JS Plugins -->
+    <!-- Plugins -->
     <script src="./assets/js/plugins/chartjs.min.js" async></script>
     <script src="./assets/js/plugins/perfect-scrollbar.min.js" async></script>
   </body>
